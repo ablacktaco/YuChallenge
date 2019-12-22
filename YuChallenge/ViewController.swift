@@ -9,12 +9,16 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        yuImageView.frame.size.width = 100
     }
 
-
+    @IBOutlet var yuImageView: UIImageView!
+    @IBAction func changeSizeOfYu(_ sender: UISlider) {
+        
+    }
+    
 }
-
