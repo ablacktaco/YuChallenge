@@ -9,16 +9,11 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        yuImageView.frame.size.width = 100
-    }
 
-    @IBOutlet var yuImageView: UIImageView!
-    @IBAction func changeSizeOfYu(_ sender: UISlider) {
-        
+    @IBOutlet var contentView: UIView!
+    @IBOutlet var yuWidth: NSLayoutConstraint!
+    @IBAction func changeSize(_ sender: UISlider) {
+        yuWidth.constant = contentView.frame.width * CGFloat(sender.value)
     }
     
 }
